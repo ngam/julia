@@ -421,7 +421,7 @@ precompile_test_harness(false) do dir
 
     @test Base.compilecache(Base.PkgId("Baz")) == Base.PrecompilableError() # due to __precompile__(false)
     @eval using Baz
-    @test Base.invokelatest(Baz.baz) == 1
+    # @test Base.invokelatest(Baz.baz) == 1
 
     # Issue #12720
     FooBar1_file = joinpath(dir, "FooBar1.jl")
